@@ -1,13 +1,179 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+body{
+        font-family:"ubuntu",sans-serif;
+    }
+    a {
+        text-decoration: none;
+        color:aqua;
+    }
+    .headerContainer{
+        width: 80%;
+        margin:auto;
+        display:flex;
+        justify-content:space-between;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        border-radius:10px;
+        margin-top:1rem;
+        margin-bottom:1rem;
+        /* color:aqua; */
+        padding: 5px;
+    }
+    .headerContainer h1{
+        margin-top:1.5rem;
+    }
+    .headerContainer img{
+        width: 70px;
+        height: 70px;
+    }
+    .fromContainer{
+      width:100%;
+      height:auto;
+      /* border:2px solid grey; */
+      display:flex;
+      justify-content:center;
+    }
+    .fromContainer form{
+        width:50%;
+        height:auto;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        /* border:2px solid black; */
+        padding:1rem;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        margin-top: 1rem;
+    }
+    .fromContainer form .text{
+        margin-bottom: 1rem;
+        border:none;
+        border-bottom:2px solid grey;
+        width:100%;
+        font-size: 15px;
+        font-family: inherit;
+        padding-left:.5rem;
+        padding-right:.5rem;
+        padding-top:.5rem;
+        padding-bottom:.2rem;
+        outline:none;
+    }
+    .show{
+        width:60%;
+        height:200px;
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:center;
+        margin:auto;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    }
+    .formContainer form .file{
+        width:100%;
+        /* margin-right: 2rem; */
+    }
+    form button{
+        width:100%;
+        margin-top: .5rem;
+        cursor:pointer;
+    }
+    form .submit{
+        height:2.8rem;
+        border:none;
+        border-radius:5px;
+        background-color:rgb(51, 64, 141);
+        font-size: 20px;
+        color:white;
+        font-family: inherit;
+        outline:none;
+    }
+    form .clear{
+        height:1.8rem;
+        border-radius:5px;
+        border:none;
+        background-color:rgb(209, 49, 103);
+        font-family: inherit;
+        font-size: 17px;
+        color:white;
+        outline:none;
+    }
+    .cardContainer{
+         /* width:auto; */
+         /* max-width: 30%; */
+       /* min-width:300px; */
+       width:300px;
+        height:auto;
+        /* height:300px; */
+        /* border:2px solid black; */
+        margin-left:1rem;
+        margin-right: 1rem;
+        overflow:auto;
+        padding:.5rem;
+        margin: 1rem;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        border-radius: 5px;
+    }
+    .cardContainer img{
+        width:100%;
+    }
+    .cardContainer .creator{
+        display:flex;
+       justify-content:space-between;
+       position: relative;
+       top:2rem;
+       color:rgb(180, 178, 178);
+       padding:.5rem;
+    }
+    .cardContainer .moreDetails{
+        padding:.5rem;
+        margin-top:.5rem;
+        margin-bottom:.5rem;
+    }
+    .cardContainer .moreDetails p{
+        margin-top:.5rem;
+        margin-bottom:.5rem;
+    }
+    .cardContainer .buttonContainer{
+      /* border:2px solid rgb(139, 76, 76); */
+      display:flex;
+      justify-content:space-between;
+      overflow:cover;
+      padding-left:.5rem;
+      padding-right:.5rem;
+    }
+    .cardContainer .buttonContainer button{
+        border:0;
+        width:60px;
+        height:30px;
+        font-family: inherit;
+        font-size:15px;
+        cursor:pointer;
+        border-radius:5px;
+        outline:none;
+    }
+    .buttonContainer button:hover{
+        border-bottom: 1px solid black;
+        border-radius: 0px;
+    }
+    .mainCardContainer{
+      /* min-width:300px; */
+      /* min-height:300px; */
+      width:100%;
+      height:auto;
+      padding:.5rem;
+      display:flex;
+      flex-wrap: wrap;
+      justify-content:space-evenly
+    }
+    @media only screen and (max-width:450px){
+        .cardContainer{ width:100%; max-width:100%}
+        /* .formContainer form .file{
+    -        font-size: 5px;
+    -    } */
+        .fromContainer form{
+          width:100%;
+        }
+    }
