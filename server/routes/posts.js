@@ -2,7 +2,6 @@ const express=require('express');
 const router=express.Router();
 const mongoose = require("mongoose");
 const PostMessage = require("./../schema/postSchema");
-const auth = require("../middleware/auth")
 
 router.get('/',async (req,res)=>{
     try{
@@ -13,9 +12,9 @@ router.get('/',async (req,res)=>{
     }
 })
 
-router.post('/',auth,async (req,res)=>{
+router.post('/',async (req,res)=>{
     const message=req.body;
-    const newMessage=new PostMessage({...message,creator:req.userId,createdAt:new Date().toISOString()});
+    const newMessage=new PostMessage(message);
     try{
     await newMessage.save();
     res.status(201).json(newMessage);
@@ -24,7 +23,7 @@ router.post('/',auth,async (req,res)=>{
     }
 })
 
-router.patch('/:id',auth,async(req,res)=>{
+router.patch('/:id',async(req,res)=>{
     const {id:_id}=req.params;
     const post=req.body;
     if(!mongoose.Types.ObjectId.isValid(_id))
@@ -34,7 +33,7 @@ router.patch('/:id',auth,async(req,res)=>{
     res.status(200).json(updatedPost);
 })
 
-router.delete('/:id',auth,async(req,res)=>{
+router.delete('/:id',async(req,res)=>{
     const {id}=req.params;
     if(!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send('Invalid Post Id');

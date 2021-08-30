@@ -3,7 +3,6 @@ const postSchema = mongoose.Schema({
     title: String,
     creator: String,
     message: String,
-    name:String,
     tags: [String],
     file: String,
     createdAt: {
