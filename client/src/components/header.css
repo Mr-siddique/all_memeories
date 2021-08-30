@@ -1,0 +1,49 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.headerContainer .left{
+    display:flex;
+}
+.signInBtn{
+    width:6rem;
+    height:2.5rem;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    font-size:25px;
+    background-color:rgb(51, 64, 141);;
+    color:white;
+    font-family: inherit;
+    cursor:pointer;
+    margin-top:.7rem;
+}
+
+.headerContainer .profile{
+    display:flex;
+}
+.headerContainer .profile .logout{
+    width:6rem;
+    height:2.5rem;
+    border:none;
+    outline:none;
+    border-radius:10px;
+    font-size:22px;
+    background-color:rgb(196, 41, 87);
+    color:white;
+    font-family: inherit;
+    cursor:pointer;
+    margin-top:.7rem;
+    margin-left:1rem;
+}
+.headerContainer .profile img{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    margin-top:1rem;
+}
+.profile h5{
+    color:black;
+    margin-top:2rem;
+}
