@@ -1,28 +1,25 @@
-import React, { useEffect, useState } from 'react';
-import Form from './components/Form';
-import Header from './components/Header';
-import Card from './components/Card';
-import { getPosts } from './actions/posts';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import { useDispatch, useSelector } from 
-'react-redux';
-import Auth from './components/Auth/Auth';
-import Home from './components/Home';
-const App = () => {
-    const [currentId, setCurrentId] = useState(null);
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(getPosts());
-    }, [dispatch]);
-    const posts = useSelector(state => state.posts);
-    return (
-        <div className='container'>
-            <Header />
-            <Switch>
-             <Route path='/' exact component={Home}/>
-             <Route path='/auth' exact component={Auth}/>
-            </Switch>
-        </div>
-    )
+import logo from './logo.svg';
+import './App.css';
+
+function App() {
+  return (
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>
+          Edit <code>src/App.js</code> and save to reload.
+        </p>
+        <a
+          className="App-link"
+          href="https://reactjs.org"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Learn React
+        </a>
+      </header>
+    </div>
+  );
 }
+
 export default App;
