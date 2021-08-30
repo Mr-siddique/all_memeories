@@ -3,6 +3,7 @@ const mongoose = require("mongoose");
 const express = require("express");
 const cors = require("cors");
 const postRoutes = require("./routes/posts")
+const userRoutes = require("./routes/users")
 
 const app = express();
 
@@ -11,6 +12,7 @@ app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 app.use(cors());
 
 app.use("/", postRoutes);
+app.use('/user',userRoutes);
 
 
 
